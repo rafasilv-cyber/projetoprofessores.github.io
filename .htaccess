@@ -1,0 +1,8 @@
+Options -Indexes
+DirectoryIndex index.php
+<IfModule mod_alias.c>
+    RedirectMatch 404 /\.(git|env)(/|$)
+</IfModule>
+<FilesMatch "^(database\.sql|README\.md|\.env|\.gitignore)$">
+    Require all denied
+</FilesMatch>
